@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7773376354378662476}
   - component: {fileID: 4919366151803450668}
   - component: {fileID: 1258811284837443952}
+  - component: {fileID: 1221806297773908261}
   m_Layer: 0
   m_Name: Ross
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1221806297773908261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058026542279614543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b028aee137cb5148865f2601d00d96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

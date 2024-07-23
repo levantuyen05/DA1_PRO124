@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 271997326}
   - component: {fileID: 271997325}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Jack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 698560566}
   - component: {fileID: 698560565}
   m_Layer: 0
-  m_Name: 3
+  m_Name: Tasi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1444,7 +1444,7 @@ GameObject:
   - component: {fileID: 1319793316}
   - component: {fileID: 1319793315}
   m_Layer: 0
-  m_Name: 2
+  m_Name: Ross
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,7 +1550,7 @@ GameObject:
   - component: {fileID: 1503313991}
   - component: {fileID: 1503313990}
   m_Layer: 0
-  m_Name: 4
+  m_Name: Apollo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

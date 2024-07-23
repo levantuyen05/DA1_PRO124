@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 645452689825859464}
   - component: {fileID: 1364189760466717174}
   - component: {fileID: 6832891456249875078}
+  - component: {fileID: 8922972732334374635}
   m_Layer: 0
   m_Name: Apollo
   m_TagString: Untagged
@@ -106,3 +107,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8922972732334374635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411549190698287650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b028aee137cb5148865f2601d00d96b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

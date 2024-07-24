@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float moveSpeed = 5f;
+    public  Animator animator; 
+    private Rigidbody2D rb;
+    public Vector3 moveInput;
+    private void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        moveInput.x = Input.GetAxis("Horizontal");
+        moveInput.y = Input.GetAxis("Vertical");
+        transform.position += moveInput * moveSpeed * Time.deltaTime;
+        animator.SetFloat("Speed", moveInput.sqrMagnitude);
+        if (moveInput.x != 0)
+        {
+            float rotationAngle = (moveInput.x > 0) ? 0f : 180f;
+            transform.rotation = Quaternion.Euler(0f, rotationAngle, 0f);
+        }
     }
 }
+    

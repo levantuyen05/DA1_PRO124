@@ -16,7 +16,7 @@ public class MenuSetting : MonoBehaviour
     }
     public void Setting()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(5);
     }
 
     public void Extras()
@@ -26,6 +26,12 @@ public class MenuSetting : MonoBehaviour
     public void Exit()
     {
         SceneManager.LoadScene(2);
+    }
+
+    public void ExitMenu()
+    {
+        SceneManager.LoadScene(4);
+
     }
 }
 

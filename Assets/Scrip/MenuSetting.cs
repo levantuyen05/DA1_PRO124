@@ -10,7 +10,10 @@ public class MenuSetting : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-
+    public void characterslect()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void Setting()
     {
         SceneManager.LoadScene(2);
@@ -18,7 +21,7 @@ public class MenuSetting : MonoBehaviour
 
     public void Extras()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
     public void Exit()
     {

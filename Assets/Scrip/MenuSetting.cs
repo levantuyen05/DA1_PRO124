@@ -30,7 +30,7 @@ public class MenuSetting : MonoBehaviour
 
     public void ExitMenu()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(7);
 
     }
 }

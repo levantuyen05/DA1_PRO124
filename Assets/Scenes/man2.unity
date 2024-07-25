@@ -326,8 +326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6517716432465332577, guid: 89503022d303fd74dbd230a381e30cb2, type: 3}
   firePos: {fileID: 1944994769}
-  TimeFire: 0.5
-  bulletForce: 5
+  TimeFire: 0.2
+  bulletForce: 25
 --- !u!1 &1187313406
 GameObject:
   m_ObjectHideFlags: 0

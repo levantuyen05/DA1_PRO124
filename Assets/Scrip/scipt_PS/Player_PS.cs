@@ -10,28 +10,28 @@ public class Player_PS : MonoBehaviour
     Rigidbody2D rb;
     private int current;
     public SpriteRenderer SR;
-   
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
-        
+
     }
 
-    
+
     void Update()
     {
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
         print(moveInput.magnitude);
-        
+
     }
     private void FixedUpdate()
     {
         rb.velocity = moveInput * speedMove * Time.deltaTime;
-        if (moveInput.x != 0 )
+        if (moveInput.x != 0)
         {
             if (moveInput.x > 0)
                 SR.transform.localScale = new Vector3(1, 1, 0);

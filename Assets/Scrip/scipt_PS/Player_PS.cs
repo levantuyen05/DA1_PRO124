@@ -34,8 +34,8 @@ public class Player_PS : MonoBehaviour
         if (moveInput.x != 0 )
         {
             if (moveInput.x > 0)
-                SR.transform.localScale = new Vector3(0.5f, 0.5f, 0);
-            else SR.transform.localScale = new Vector3(-0.5f, 0.5f, 0);
+                SR.transform.localScale = new Vector3(1, 1, 0);
+            else SR.transform.localScale = new Vector3(-1, 1, 0);
         }
         PlayerAnimation();
     }

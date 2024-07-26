@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Characterselect.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/man1.unity
+    path: Assets/Scenes/do_level5.unity
     guid: 587525d6189a51e4889ebb8fdb6ef40a
   - enabled: 1
     path: Assets/Scenes/Menu.unity

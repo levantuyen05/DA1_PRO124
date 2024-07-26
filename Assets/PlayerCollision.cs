@@ -2,24 +2,27 @@
 
 public class PlayerCollision : MonoBehaviour
 {
+    private HealthBar healthBar;
+
+    void Start()
+    {
+        // Tìm đối tượng có tag "HealthBar" và lấy component HealthBar
+        GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
+        if (healthBarObject != null)
+        {
+            healthBar = healthBarObject.GetComponent<HealthBar>();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        // Kiểm tra xem đối tượng va chạm có tag "enemy"
+        // Kiểm tra xem đối tượng va chạm có tag "Enemy"
         if (collision.gameObject.CompareTag("enemy"))
         {
-            // Tìm đối tượng có tag "HealthBar" trong cảnh
-            GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
-
-            if (healthBarObject != null)
+            if (healthBar != null)
             {
-                // Lấy component HealthBar từ đối tượng tìm thấy
-                HealthBar healthBar = healthBarObject.GetComponent<HealthBar>();
-
-                if (healthBar != null)
-                {
-                    // Giảm máu của nhân vật mỗi lần va chạm
-                    healthBar.TakeDamage(5f);
-                }
+                // Giảm máu của nhân vật mỗi lần va chạm
+                healthBar.TakeDamage(5f);
             }
         }
     }

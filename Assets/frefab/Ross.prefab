@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5922249932761435494}
   m_Layer: 0
   m_Name: Ross
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8975e58cec26a5b4f80f17a42cfa62a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
   animator: {fileID: 1258811284837443952}
   moveInput: {x: 0, y: 0, z: 0}

@@ -10,9 +10,5 @@ public class lifetimedestroy : MonoBehaviour
         Destroy(this.gameObject,time);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

@@ -9,6 +9,7 @@ TagManager:
   - player
   - hearth
   - HealthBar
+  - shop
   layers:
   - Default
   - TransparentFX

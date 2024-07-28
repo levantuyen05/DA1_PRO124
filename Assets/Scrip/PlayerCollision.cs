@@ -1,17 +1,31 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerCollision : MonoBehaviour
 {
-    private HealthBar healthBar;
+    public float maxHealth = 100f;  // Máu tối đa của nhân vật
+    private float currentHealth;
+    private Slider healthSlider;  // Thanh máu UI
+    private HealthSystem healthSystem;
 
     void Start()
     {
-        // Tìm đối tượng có tag "HealthBar" và lấy component HealthBar
+        currentHealth = maxHealth;
+
+        // Tìm đối tượng có tag "HealthBar" và lấy component Slider
         GameObject healthBarObject = GameObject.FindGameObjectWithTag("HealthBar");
         if (healthBarObject != null)
         {
-            healthBar = healthBarObject.GetComponent<HealthBar>();
+            healthSlider = healthBarObject.GetComponent<Slider>();
+            if (healthSlider != null)
+            {
+                healthSlider.maxValue = maxHealth;
+                healthSlider.value = maxHealth;  // Khởi tạo giá trị thanh máu
+            }
         }
+
+        // Tìm đối tượng HealthSystem (có thể đặt trên cùng một GameObject với script này)
+        healthSystem = GetComponent<HealthSystem>();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -19,11 +33,21 @@ public class PlayerCollision : MonoBehaviour
         // Kiểm tra xem đối tượng va chạm có tag "Enemy"
         if (collision.gameObject.CompareTag("enemy"))
         {
-            if (healthBar != null)
+            if (healthSystem != null)
             {
                 // Giảm máu của nhân vật mỗi lần va chạm
-                healthBar.TakeDamage(5f);
+                healthSystem.TakeDamage(5f);
+               // UpdateHealthSlider();
             }
         }
     }
+
+    // Cập nhật giá trị thanh máu
+    //private void UpdateHealthSlider()
+    //{
+    //    if (healthSlider != null)
+    //    {
+    //        //healthSlider.value = healthSystem.GetCurrentHealth();
+    //    }
+    //}
 }

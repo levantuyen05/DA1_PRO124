@@ -8,7 +8,7 @@ public class LoadMenu : MonoBehaviour
         // khi bấm vào màn hình bất kì thì sẽ load sang scene khác
         if (Input.GetMouseButtonDown(0)) // Kiểm tra nếu nút chuột trái được nhấn
         {
-            SceneManager.LoadScene("Menu"); // Thay thế "NextScene" bằng tên scene bạn muốn chuyển tới
+            SceneManager.LoadScene("Login"); // Thay thế "NextScene" bằng tên scene bạn muốn chuyển tới
         }
     }
 }

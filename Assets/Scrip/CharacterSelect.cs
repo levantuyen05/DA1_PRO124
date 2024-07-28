@@ -20,7 +20,7 @@ public class CharacterSelect : MonoBehaviour
     }
     public void OnPlayBtnClick()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(1);
     }
 
     public void OnPrevBtnClick()

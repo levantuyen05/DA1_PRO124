@@ -3,14 +3,25 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using static UnityEditor.ShaderData;
 
 public class dangkytaikhoan : MonoBehaviour
 {
     public TMP_InputField username;
     public TMP_InputField password;
-    public TMP_InputField thongbao;
+    public TextMeshProUGUI thongbao;
 
+
+    public Button chuyendn;
+    public GameObject dangky;
+
+    public void dangkybutton()
+    {
+        StartCoroutine(DangKy());
+       
+
+    }
     private IEnumerator DangKy()
     {
         WWWForm Form = new WWWForm();
@@ -31,7 +42,16 @@ public class dangkytaikhoan : MonoBehaviour
                 case "exist": thongbao.text = " tài khoản đã tồn tại"; break;
                 case "OK": thongbao.text = "Đăng kí thành công"; break;
                 case "ERROR": thongbao.text = "Đăng kí không thành công"; break;
+                default: thongbao.text = "không kết nối được với sever";break;
             }
         }
+    }
+    public void SwitchForm()
+    {
+        dangky.SetActive(!dangky.activeSelf);
+    }
+     void Start()
+    {
+        chuyendn.onClick.AddListener(SwitchForm);
     }
 }

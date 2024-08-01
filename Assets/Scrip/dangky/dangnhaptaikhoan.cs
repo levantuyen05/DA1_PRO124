@@ -54,7 +54,7 @@ public class dangnhaptaikhoan : MonoBehaviour
                 thongbao.text = "Đăng nhập thành công";
                 PlayerPrefs.SetString("token", get);
                 Debug.Log(get);
-               // SceneManager.LoadScene(1);
+                SceneManager.LoadScene(1);
             }
         }
     }

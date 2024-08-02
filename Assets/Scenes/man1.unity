@@ -275,7 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShopItemsList:
   - Image: {fileID: -1876581404, guid: b473f34ebf7e98b429cab69af9a4105e, type: 3}
-    Price: 0
+    Price: 450
     IsPurchased: 1
   - Image: {fileID: 1219203161, guid: b473f34ebf7e98b429cab69af9a4105e, type: 3}
     Price: 0

@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 1364189760466717174}
   - component: {fileID: 6832891456249875078}
   - component: {fileID: -231118850330603138}
+  - component: {fileID: 2356701848973029248}
+  - component: {fileID: -2297894254670613434}
+  - component: {fileID: -8314936171609921449}
   m_Layer: 0
   m_Name: Apollo
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 8411549190698287650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 0.8, z: 0}
-  m_LocalScale: {x: 0.26420152, y: 0.21519475, z: 1}
+  m_LocalPosition: {x: -8.0119, y: 1.551, z: 0}
+  m_LocalScale: {x: 0.36068794, y: 0.28853312, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -119,6 +122,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8975e58cec26a5b4f80f17a42cfa62a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 8
   animator: {fileID: 6832891456249875078}
   moveInput: {x: 0, y: 0, z: 0}
+--- !u!114 &2356701848973029248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411549190698287650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a66214853ad85438f7a1eb0aaad645, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 7578814202645876289, guid: 3c624f9bf58942d45b1d81d6f0b57e4b, type: 3}
+  spwanRate: 2.5
+  spawnRadius: 30
+--- !u!114 &-2297894254670613434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411549190698287650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca1f1952e15c8643982a322fb764883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab1: {fileID: 7137365495525141691, guid: dc07b815307e516428034853b60d81e6, type: 3}
+  spwanRate: 2.5
+  spawnRadius: 30
+--- !u!114 &-8314936171609921449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411549190698287650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdb0ab235f192994eb9d38fbf80cb3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab2: {fileID: 6410495278466858774, guid: fe61d9052edbb66448a8ad571dccaaaf, type: 3}
+  spwanRate: 2.5
+  spawnRadius: 30

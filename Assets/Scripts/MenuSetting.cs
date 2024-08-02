@@ -16,12 +16,12 @@ public class MenuSetting : MonoBehaviour
     }
     public void Setting()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(6);
     }
 
     public void Extras()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(4);
     }
     public void Exit()
     {
@@ -30,7 +30,12 @@ public class MenuSetting : MonoBehaviour
 
     public void ExitMenu()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(8);
+
+    }
+    public void login()
+    {
+        SceneManager.LoadScene(2);
 
     }
 }

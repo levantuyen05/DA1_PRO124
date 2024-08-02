@@ -6,6 +6,10 @@ TagManager:
   tags:
   - bullet
   - enemy
+  - player
+  - hearth
+  - HealthBar
+  - shop
   layers:
   - Default
   - TransparentFX

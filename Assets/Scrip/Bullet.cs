@@ -57,16 +57,16 @@ public class Bullet : MonoBehaviour
         rb.velocity = direction * bulletSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Enemy"))
-        {
-            int damage = Random.Range(minDamage, maxDamage);
-            //collision.GetComponent<Health>().TakeDam(damage);
-            //collision.GetComponent<EnemyController>().TakeDamEffect(damage);
-            Destroy(gameObject);
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Enemy"))
+    //    {
+    //        int damage = Random.Range(minDamage, maxDamage);
+    //        //collision.GetComponent<Health>().TakeDam(damage);
+    //        //collision.GetComponent<EnemyController>().TakeDamEffect(damage);
+    //        Destroy(gameObject);
+    //    }
+    //}
 }
 
 

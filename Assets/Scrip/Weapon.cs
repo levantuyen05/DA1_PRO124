@@ -57,10 +57,11 @@ public class Weapon : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemy"))
         {
-            // Hủy kẻ thù
-            Destroy(other.gameObject);
-            // Hủy đạn
-            Destroy(gameObject);
+            Destroy(other.gameObject); // Quái biến mất
+
+        
+            Destroy(gameObject); // Đạn cũng biến mất
         }
     }
+   
 }

@@ -10,6 +10,7 @@ TagManager:
   - hearth
   - HealthBar
   - shop
+  - ItemPrefab
   layers:
   - Default
   - TransparentFX

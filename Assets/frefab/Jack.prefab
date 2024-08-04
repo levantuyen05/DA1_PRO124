@@ -130,9 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 2838833017999220528, guid: d85df9af6e57c814eb588bc10b34a5d4, type: 3}
   firePos: {fileID: 5858901817782517330}
-  timeBtwFire: 0.2
+  TimeBtwFire: 0.2
   bulletForce: 40.6
-  lootBagPrefab: {fileID: 7380247213028858846, guid: 76658f0cc91a6c941a3849b2e2cf22a7, type: 3}
+  itemPrefab: {fileID: 7380247213028858846, guid: 76658f0cc91a6c941a3849b2e2cf22a7, type: 3}
 --- !u!1 &7810412438282797596
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,12 @@ public class Weapon : MonoBehaviour
     public float TimeBtwFire = 0.2f;
     public float bulletForce;
     private float timeBtwFire;
-   // public GameObject muzzle;
-    
+     public GameObject itemPrefab1; // Loại vật phẩm 1
+    public GameObject itemPrefab2; // Loại vật phẩm 2
+    public GameObject itemPrefab3; // Loại vật phẩm 3
+
+    // public GameObject muzzle;
+
 
     void Update()
     {
@@ -53,15 +57,44 @@ public class Weapon : MonoBehaviour
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
         rb.AddForce(transform.right * bulletForce, ForceMode2D.Impulse);
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("enemy"))
+        if (collision.gameObject.tag == "enemy") // Kiểm tra xem đối tượng va chạm có tag là "Enemy" không
         {
-            Destroy(other.gameObject); // Quái biến mất
+            // Lấy vị trí của quái vật trước khi bị tiêu diệt
+            Vector3 enemyPosition = collision.transform.position;
 
-        
-            Destroy(gameObject); // Đạn cũng biến mất
+            // Tiêu diệt quái vật
+            Destroy(collision.gameObject);
+
+            // Tiêu diệt viên đạn
+            Destroy(gameObject);
+
+            // Chọn ngẫu nhiên một loại vật phẩm để sinh ra
+            GameObject itemToSpawn = GetRandomItem();
+            Instantiate(itemToSpawn, enemyPosition, Quaternion.identity);
         }
     }
-   
+    private GameObject GetRandomItem()
+    {
+        float randomValue = Random.Range(0f, 1f); // Sinh ra số ngẫu nhiên từ 0.0 đến 1.0
+
+        if (randomValue < 0.4f) // Tỷ lệ 40% cho itemPrefab1
+        {
+            return itemPrefab1;
+        }
+        else if (randomValue < 0.5f) // Tỷ lệ 10% cho itemPrefab2 (0.4 đến 0.5)
+        {
+            return itemPrefab2;
+        }
+        else if (randomValue < 0.53f) // Tỷ lệ 3% cho itemPrefab3 (0.5 đến 0.53)
+        {
+            return itemPrefab3;
+        }
+        else
+        {
+            // Trường hợp không có gì xảy ra (có thể không sinh ra vật phẩm)
+            return null;
+        }
+    }
 }

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5506442057930138997}
   - component: {fileID: 5898827433236367064}
   - component: {fileID: 1111789165645662990}
-  - component: {fileID: 1292050278405827439}
   m_Layer: 0
   m_Name: do
   m_TagString: enemy
@@ -104,7 +103,6 @@ MonoBehaviour:
   speed: 10.06
   stoppingDistance: 2
   health: 10
-  lootPrefab: {fileID: 0}
 --- !u!58 &5506442057930138997
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,18 +186,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1292050278405827439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7137365495525141691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a6745886e472b244afd757b2364ef9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  droppedItemPrefab: {fileID: 7380247213028858846, guid: 76658f0cc91a6c941a3849b2e2cf22a7, type: 3}
-  lootList:
-  - {fileID: 11400000, guid: 210ed9a48541cc94494ea2b7dcdaeaf2, type: 2}

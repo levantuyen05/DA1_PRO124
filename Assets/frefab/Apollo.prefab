@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2356701848973029248}
   - component: {fileID: -2297894254670613434}
   - component: {fileID: -8314936171609921449}
+  - component: {fileID: 4010896967429678881}
   m_Layer: 0
   m_Name: Apollo
   m_TagString: player
@@ -170,3 +171,18 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 6410495278466858774, guid: fe61d9052edbb66448a8ad571dccaaaf, type: 3}
   spwanRate: 2.5
   spawnRadius: 30
+--- !u!114 &4010896967429678881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8411549190698287650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a6745886e472b244afd757b2364ef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 7380247213028858846, guid: 76658f0cc91a6c941a3849b2e2cf22a7, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 4ec141cdca751fa4783b2605f4e2a361, type: 2}

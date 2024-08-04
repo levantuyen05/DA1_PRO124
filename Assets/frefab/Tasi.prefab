@@ -11,13 +11,9 @@ GameObject:
   - component: {fileID: 3283306636300267355}
   - component: {fileID: 8266404424850808716}
   - component: {fileID: 6405511900742953362}
-  - component: {fileID: 4665025617456891941}
-  - component: {fileID: 6990935747188753511}
-  - component: {fileID: -107822818469482385}
-  - component: {fileID: -1611260887931787393}
   m_Layer: 0
   m_Name: Tasi
-  m_TagString: player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 6506353026617344814}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.9268, y: 0.8191, z: 0}
-  m_LocalScale: {x: 0.26550242, y: 0.2359775, z: 1}
+  m_LocalPosition: {x: -5.28, y: 1.72, z: 0}
+  m_LocalScale: {x: 0.43324, y: 0.39512, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,63 +106,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4665025617456891941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6506353026617344814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8975e58cec26a5b4f80f17a42cfa62a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8
-  animator: {fileID: 6405511900742953362}
-  moveInput: {x: 0, y: 0, z: 0}
---- !u!114 &6990935747188753511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6506353026617344814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08a66214853ad85438f7a1eb0aaad645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7578814202645876289, guid: 3c624f9bf58942d45b1d81d6f0b57e4b, type: 3}
-  spwanRate: 2.5
-  spawnRadius: 30
---- !u!114 &-107822818469482385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6506353026617344814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ca1f1952e15c8643982a322fb764883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab1: {fileID: 7137365495525141691, guid: dc07b815307e516428034853b60d81e6, type: 3}
-  spwanRate: 2.5
-  spawnRadius: 30
---- !u!114 &-1611260887931787393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6506353026617344814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdb0ab235f192994eb9d38fbf80cb3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefab2: {fileID: 6410495278466858774, guid: fe61d9052edbb66448a8ad571dccaaaf, type: 3}
-  spwanRate: 2.5
-  spawnRadius: 30

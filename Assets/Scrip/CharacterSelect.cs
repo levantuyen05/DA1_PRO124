@@ -12,7 +12,7 @@ public class CharacterSelect : MonoBehaviour
     [SerializeField] TextMeshProUGUI Charactername;
 
     [SerializeField] GameObject[] characterPrefabs;
-    public static GameObject selectedCharacter;
+    public static GameObject selectedPrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class CharacterSelect : MonoBehaviour
     }
     public void OnPlayBtnClick()
     {
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(1);
     }
 
     public void OnPrevBtnClick()
@@ -47,7 +47,7 @@ public class CharacterSelect : MonoBehaviour
             {
                 characters[i].GetComponent<SpriteRenderer>().color = Color.white;
                 characters[i].GetComponent<Animator>().enabled = true;
-                selectedCharacter = characterPrefabs[i];
+                selectedPrefabs = characterPrefabs[i];
                 Charactername.text = characterPrefabs[i].name;
             }
             else

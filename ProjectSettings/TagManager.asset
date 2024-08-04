@@ -10,6 +10,13 @@ TagManager:
   - hearth
   - HealthBar
   - shop
+  - ItemPrefab
+  - loot2
+  - loot3
+  - loot1
+  - Score
+  - scoreText
+  - score
   layers:
   - Default
   - TransparentFX

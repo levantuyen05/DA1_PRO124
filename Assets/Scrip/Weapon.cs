@@ -21,7 +21,7 @@ public class Weapon : MonoBehaviour
     {
         RotateGun();
         timeBtwFire -= Time.deltaTime;
-        if (Input.GetMouseButtonDown(0) && timeBtwFire < 0) 
+        if (Input.GetMouseButtonDown(0) && timeBtwFire < 0)
         {
             FireBullet();
         }
@@ -32,7 +32,7 @@ public class Weapon : MonoBehaviour
         Vector2 lookDir = mousePos - transform.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
 
-        Quaternion  rotation = Quaternion.Euler(0, 0, angle);
+        Quaternion rotation = Quaternion.Euler(0, 0, angle);
         transform.rotation = rotation;
         if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
         {
@@ -45,13 +45,13 @@ public class Weapon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, transform.eulerAngles.z);
         }
     }
-     void FireBullet()
+    void FireBullet()
     {
         timeBtwFire = timeBtwFire;
 
         GameObject bulletTmp = Instantiate(bullet, firePos.position, Quaternion.identity);
         //effect
-       //Instantiate(muzzle, firePos.position, transform.rotation, transform);
+        //Instantiate(muzzle, firePos.position, transform.rotation, transform);
 
 
         Rigidbody2D rb = bulletTmp.GetComponent<Rigidbody2D>();
@@ -72,7 +72,10 @@ public class Weapon : MonoBehaviour
 
             // Chọn ngẫu nhiên một loại vật phẩm để sinh ra
             GameObject itemToSpawn = GetRandomItem();
-            Instantiate(itemToSpawn, enemyPosition, Quaternion.identity);
+            if (itemToSpawn != null)
+            {
+                Instantiate(itemToSpawn, enemyPosition, Quaternion.identity);
+            }
         }
     }
     private GameObject GetRandomItem()

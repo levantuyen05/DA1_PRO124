@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public Vector3 moveInput;
 
+
     private TextMeshProUGUI scoreText; // Tham chiếu đến TextMeshPro để hiển thị điểm số
     private int score = 0; // Biến để lưu trữ điểm số
 

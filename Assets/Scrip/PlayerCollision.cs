@@ -37,7 +37,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 // Giảm máu của nhân vật mỗi lần va chạm
                 healthSystem.TakeDamage(5f);
-               // UpdateHealthSlider();
+                // UpdateHealthSlider();
             }
         }
     }

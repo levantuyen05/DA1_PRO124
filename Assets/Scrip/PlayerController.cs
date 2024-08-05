@@ -20,10 +20,7 @@ public class Player : MonoBehaviour
     private bool once;
     [SerializeField] GameObject Bullet;
     [SerializeField] Transform Gun;
-    [SerializeField] float atkSpeed, countDown = 0;
     public Vector3 moveInput;
-
-    public GameObject damPopUp;
     //public LosePanel losePanel;
 
     private void Start()
@@ -37,7 +34,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnFire();
+        
         /// Part 2
         // Movement
         moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -78,37 +75,6 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) // Bắn đạn khi nhấn chuột trái
         {
             Shoot();
-        }
-    }
-
-    //public void TakeDamageEffect(int damage)
-    //{
-    //    if (damPopUp != null)
-    //    {
-    //        GameObject instance = Instantiate(damPopUp, transform.position
-    //                + new Vector3(UnityEngine.Random.Range(-0.3f, 0.3f), 0.5f, 0), Quaternion.identity);
-    //        instance.GetComponentInChildren<TextMeshProUGUI>().text = damage.ToString();
-    //        Animator animator = instance.GetComponentInChildren<Animator>();
-    //        animator.Play("red");
-    //    }
-    //    if (GetComponent<Health>().isDead)
-    //    {
-    //        losePanel.Show();
-    //    }
-    //}
-    void OnFire()
-    {
-        countDown -= Time.deltaTime;
-        if (countDown > 0)
-        {
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(Bullet, Gun.position, transform.rotation);
-            countDown = atkSpeed;
-            Invoke("ResetAttackAnimation", 0.5f);
-
         }
     }
     void Shoot()

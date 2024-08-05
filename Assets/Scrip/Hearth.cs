@@ -35,15 +35,4 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
     }
-
-    // Xử lý va chạm với quái vật
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("enemy"))
-        {
-            TakeDamage(5f);
-        }
-    }
-
-   
 }

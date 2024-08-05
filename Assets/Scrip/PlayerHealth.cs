@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -45,12 +45,4 @@ public class PlayerHealth : MonoBehaviour
     {
         Destroy(gameObject);
     }    
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.M)) 
-        {
-            TakeDamage(5);
-        }
-    }
 }

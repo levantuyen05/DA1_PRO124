@@ -5,7 +5,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Apllo : MonoBehaviour
 {
 
     public float moveSpeed = 5f;

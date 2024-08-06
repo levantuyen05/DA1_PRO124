@@ -1,34 +1,23 @@
-﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
-public class HealthSystem : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
-    public Image healthBarFill;  // Ảnh biểu diễn thanh máu
-    public float maxHealth = 100f;  // Máu tối đa của nhân vật
-    private float currentHealth;
+    public TextMeshProUGUI healthText;
+    public Image bar;
 
-    void Start()
+    public void UpdateHealth(int health, int maxHealth)
     {
-        // Thiết lập số máu ban đầu
-        currentHealth = maxHealth;
-        UpdateHealthBar();
+        healthText.text = health.ToString() + " / " + maxHealth.ToString();
+        bar.fillAmount = (float)health / (float)maxHealth;
     }
 
-    // Gọi hàm này để giảm máu
-    public void TakeDamage(float damage)
+    public void UpdateBar(int value, int maxValue, string text)
     {
-        currentHealth -= damage;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHealthBar();
+        healthText.text = text;
+        bar.fillAmount = (float)value / (float)maxValue;
     }
-
-    // Cập nhật hiển thị thanh máu
-    private void UpdateHealthBar()
-    {
-        if (healthBarFill != null)
-        {
-            healthBarFill.fillAmount = currentHealth / maxHealth;
-        }
-    }
-
 }

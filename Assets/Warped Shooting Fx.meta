@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: b2374795120b77c40b8a8c48d79313ae
+=======
+<<<<<<< HEAD:Assets/Shop.meta
+guid: b9c82188c15d0d6498e2e41915c41fb2
+=======
+guid: b2374795120b77c40b8a8c48d79313ae
+>>>>>>> Quốc:Assets/Warped Shooting Fx.meta
+>>>>>>> Stashed changes
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

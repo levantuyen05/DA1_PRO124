@@ -103,8 +103,9 @@ MonoBehaviour:
   characterSR: {fileID: 0}
   dashBoost: 2
   DashTime: 0
+  Bullet: {fileID: 5523700007460564537, guid: 12c70df6a9021e64abdd17fcd46ee07a, type: 3}
+  Gun: {fileID: 0}
   moveInput: {x: 0, y: 0, z: 0}
-  damPopUp: {fileID: 0}
 --- !u!95 &2403507144181112973
 Animator:
   serializedVersion: 5

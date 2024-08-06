@@ -1,66 +1,61 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public string healthBarName = "HealthBar";  // Tên của đối tượng Slider trong scene
-    private Slider healthBar;  // Tham chiếu đến Slider thanh máu
-    public float currentHealth = 100f;  // Giá trị máu hiện tại
-    public float maxHealth = 100f;  // Giá trị máu tối đa
-    private float damage = 5f;  // Lượng máu bị trừ khi bấm Space
+    [SerializeField] private int maxHealth;
+    int currentHealth;
+    private HealthBar healthbar; // No need to be public since we'll assign it dynamically
+    public UnityEvent OnDeath;
 
-    void Start()
+    private void OnEnable()
     {
-        // Tìm đối tượng Slider theo tên và lấy component Slider
-        GameObject healthBarObject = GameObject.Find(healthBarName);
-        if (healthBarObject != null)
-        {
-            healthBar = healthBarObject.GetComponent<Slider>();
-        }
-        else
-        {
-            Debug.LogError("HealthBar object not found!");
-        }
-
-        // Đảm bảo thanh máu bắt đầu ở giá trị tối đa
-        if (healthBar != null)
-        {
-            healthBar.maxValue = maxHealth;
-            healthBar.value = currentHealth;
-        }
+        OnDeath.AddListener(Death);
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnDisable()
     {
-        // Kiểm tra va chạm với kẻ thù
-        if (collision.gameObject.tag == "enemy")
-        {
-            TakeDamage(damage);
-        }
+        OnDeath.RemoveListener(Death);
     }
 
-    void TakeDamage(float amount)
+    private void Start()
     {
-        // Giảm máu hiện tại và đảm bảo không dưới 0
-        currentHealth = Mathf.Max(currentHealth - amount, 0f);
-
-        // Cập nhật giá trị của thanh máu nếu Slider đã được tìm thấy
-        if (healthBar != null)
+        // Find the HealthBar component dynamically
+        healthbar = FindObjectOfType<HealthBar>();
+        if (healthbar == null)
         {
-            healthBar.value = currentHealth;
+            Debug.LogError("HealthBar not found in the scene.");
+            return;
         }
 
-        // Kiểm tra nếu máu giảm về 0 thì nhân vật chết
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
+        currentHealth = maxHealth;
+        healthbar.UpdateBar(currentHealth, maxHealth);
     }
 
-    void Die()
+    public void TakeDamage(int damage)
     {
-        // Xử lý khi nhân vật chết, ví dụ: hiển thị màn hình game over
-        Debug.Log("Player has died!");
-        // Các mã lệnh khác để xử lý khi nhân vật chết
+        currentHealth -= damage;
+        if (currentHealth < 0)
+        {
+            currentHealth = 0;
+            OnDeath.Invoke();
+        }
+        healthbar.UpdateBar(currentHealth, maxHealth);
+    }
+
+    public void Death()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collided object is tagged as "Enemy"
+        if (collision.gameObject.CompareTag("enemy"))
+        {
+            TakeDamage(1);
+        }
     }
 }

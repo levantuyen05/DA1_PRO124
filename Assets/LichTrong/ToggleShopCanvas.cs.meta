@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/AstarPathfindingProject/Core/AI/AIPath.cs.meta
-guid: f6eb1402c17e84a9282a7f0f62eb584f
-========
-guid: 424cf2c52a4ec4845a4e666d6351a05a
->>>>>>>> Lịch:Assets/playerHearlth.cs.meta
+guid: ee98115c019d8b648af803e04c1b0526
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

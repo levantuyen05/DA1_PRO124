@@ -132,9 +132,7 @@ MonoBehaviour:
   firePos: {fileID: 5858901817782517330}
   TimeBtwFire: 0.2
   bulletForce: 40.6
-  itemPrefab1: {fileID: 0}
-  itemPrefab2: {fileID: 0}
-  itemPrefab3: {fileID: 0}
+  itemPrefab: {fileID: 7380247213028858846, guid: 76658f0cc91a6c941a3849b2e2cf22a7, type: 3}
 --- !u!1 &7810412438282797596
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,11 +146,12 @@ GameObject:
   - component: {fileID: 1970727336111085612}
   - component: {fileID: 7153895197016851258}
   - component: {fileID: 100761140370927859}
+  - component: {fileID: 1320781358170367390}
   - component: {fileID: 3861243524121318005}
   - component: {fileID: 7332748791739535146}
   - component: {fileID: 3682945299870213260}
   - component: {fileID: -5764800093758627374}
-  - component: {fileID: 7046222114655068165}
+  - component: {fileID: -7541979013896374013}
   m_Layer: 0
   m_Name: Jack
   m_TagString: player
@@ -310,6 +309,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.190078, y: 9.292222}
   m_EdgeRadius: 0
+--- !u!114 &1320781358170367390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7810412438282797596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f18655d6227d34aa6089f756676a0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!50 &3861243524121318005
 Rigidbody2D:
   serializedVersion: 4
@@ -382,7 +394,7 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 6410495278466858774, guid: fe61d9052edbb66448a8ad571dccaaaf, type: 3}
   spwanRate: 1
   spawnRadius: 30
---- !u!114 &7046222114655068165
+--- !u!114 &-7541979013896374013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,23 +403,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7810412438282797596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 424cf2c52a4ec4845a4e666d6351a05a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f532d8f9a10ba144ac690897bf5756c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthbar: {fileID: 0}
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7046222114655068165}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: Death
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

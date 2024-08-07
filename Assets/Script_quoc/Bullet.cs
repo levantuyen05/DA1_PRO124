@@ -49,11 +49,11 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            //Enemy enemy = other.GetComponent<Enemy>();
-            //if (enemy != null)
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
             {
-                //int randomDamage = Random.Range(minDamage, maxDamage + 1);
-                //enemy.TakeDamage(randomDamage);
+                int randomDamage = Random.Range(minDamage, maxDamage + 1);
+                enemy.TakeDamage(randomDamage);
                 ShowDamage(randomDamage, other.ClosestPoint(transform.position));
             }
             transform.position = other.ClosestPoint(transform.position);

@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
     private int randomDamage;
     public GameObject damageTextPrefab;
     [SerializeField] float bulletSpeed = 10f;
-    public float lifeTime;
+    public float lifeTime = 1f;
     Rigidbody2D myRigidbody;
     private Vector3 targetPosition;
     float xSpeed;
@@ -22,7 +22,9 @@ public class Bullet : MonoBehaviour
         xSpeed = bulletSpeed;
         randomDamage = Random.Range(minDamage, maxDamage + 1);
         Debug.Log(randomDamage);
+        
     }
+    
     public void SetTargetPosition(Vector3 position)
     {
         targetPosition = position;
@@ -49,13 +51,13 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                int randomDamage = Random.Range(minDamage, maxDamage + 1);
-                enemy.TakeDamage(randomDamage);
-                ShowDamage(randomDamage, other.ClosestPoint(transform.position));
-            }
+            //Enemy enemy = other.GetComponent<Enemy>();
+            //if (enemy != null)
+            //{
+            //    int randomDamage = Random.Range(minDamage, maxDamage + 1);
+            //    enemy.TakeDamage(randomDamage);
+            //    ShowDamage(randomDamage, other.ClosestPoint(transform.position));
+            //}
             transform.position = other.ClosestPoint(transform.position);
             Destroy(gameObject);
         }

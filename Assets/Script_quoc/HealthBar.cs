@@ -19,5 +19,6 @@ public class HealthBar : MonoBehaviour
     {
         valueText.text = text;
         fillbar.fillAmount = (float)value / (float)maxValue;
+
     }
 }

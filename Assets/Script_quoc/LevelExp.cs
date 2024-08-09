@@ -1,30 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerExp : MonoBehaviour
 {
-    public HealthBar ExpBar;
-    int currentExp = 0;
-    int currentLevel = 1;
-    int requireExp = 30;
+    public Slider expBar;
+    public TextMeshProUGUI LevelText;
+    public int currentExp = 0;
+    public int expToNextLevel = 100;
+    public int currentLevel = 1;
 
     public GameObject levelUpPanel;
 
     // Level + exp
-    public void UpdateExperience(int addExp)
+    public void GainExp(int amount)
     {
-        currentExp += addExp;
-        if (currentExp >= requireExp)
+        currentExp += amount;
+        expBar.value = (float)currentExp / expToNextLevel; 
+
+        if (currentExp >= expToNextLevel)
         {
-            currentLevel++;
-            currentExp = currentExp - requireExp;
-            requireExp = (int)(requireExp * 2);
-            OpenLevelUpPanel();
-            // Level up panel
+            LevelUp();
         }
-        // Update Exp bar
-        ExpBar.UpdateBar(currentExp, requireExp, "Level " + currentLevel.ToString());
+    }
+    public void LevelUp()
+    {
+        currentLevel++;
+        currentExp -= expToNextLevel;
+        expToNextLevel += 50;
+        LevelText.text = "Level " + currentLevel;
+        expBar.value = (float)currentExp / expToNextLevel;
     }
 
     public void CloseLevelUpPanel()

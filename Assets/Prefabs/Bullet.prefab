@@ -125,7 +125,7 @@ MonoBehaviour:
   maxDamage: 100
   damageTextPrefab: {fileID: 845188638763508788, guid: 87be2fe2f2b819e4e8102045d018d319, type: 3}
   bulletSpeed: 25
-  lifeTime: 2
+  lifeTime: 1
 --- !u!58 &2096405104228270080
 CircleCollider2D:
   m_ObjectHideFlags: 0

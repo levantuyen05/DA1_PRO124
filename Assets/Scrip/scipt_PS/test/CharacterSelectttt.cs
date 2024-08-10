@@ -5,7 +5,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CharacterSelect : MonoBehaviour
+public class CharacterSelectttt : MonoBehaviour
 {
     private int index;
     [SerializeField] GameObject[] characters;

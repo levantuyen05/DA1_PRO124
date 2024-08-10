@@ -803,6 +803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 932150a3248531b428b364871448d72f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: b8cdb0123fb6cde4fb19e38d2a1eff00, type: 2}
+  health: 0
+  playerName: 
   characterDB: {fileID: 11400000, guid: b59bf143e07244e4b83f8af8ad1038e1, type: 2}
   spriteRenderer: {fileID: 1327081143}
 --- !u!212 &1327081143

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,7 +6,14 @@ using UnityEngine.Events;
 public class PlayerHealthh : MonoBehaviour
 {
 
-    [SerializeField] private int maxHealth;
+    public AllPlayerData_PL characterData;
+
+    private PlayerData playerData;
+    public int health;
+    
+
+
+    //[SerializeField] private int maxHealth;
     int currentHealth;
     public HealthBar_PS healthbar;
     public UnityEvent OnDeath;
@@ -21,8 +28,21 @@ public class PlayerHealthh : MonoBehaviour
     }
     private void Start()
     {
-        currentHealth = maxHealth;
-        healthbar.UpdateBar(currentHealth, maxHealth);
+        if (characterData != null && characterData.character.Count > 0)
+        {
+            playerData = characterData.character[1].GetDataInstance();
+
+            health = playerData.maxHealth;
+            currentHealth = playerData.currentHealth;
+            
+            // Ví dụ: truy cập dữ liệu của nhân vật đầu tiên
+            
+            Debug.Log("Character Health: " + characterData.character[1].currentHealth);
+        }
+
+
+        //currentHealth = maxHealth;
+        healthbar.UpdateBar(currentHealth, health);  //maxHealth);
     }
 
     public void TakeDamage(int damage)
@@ -34,7 +54,7 @@ public class PlayerHealthh : MonoBehaviour
             currentHealth = 0;
             OnDeath.Invoke();
         }
-        healthbar.UpdateBar(currentHealth, maxHealth);
+        healthbar.UpdateBar(currentHealth,health);//maxHealth);
     }
     public void Death()
     {

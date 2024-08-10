@@ -1,0 +1,7 @@
+Username        Score      Character       Weapon         
+-------------------------------------------------------
+tuyen           abc        2               23             
+tuyen            abc       2               23             
+tuyen            abc       2               23             
+tuyen            abc       2               23             
+tuyen            abc       2               23             

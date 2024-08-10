@@ -1,0 +1,5 @@
+Username        Weapon Name     ATK             Crit            ATKSpeed       
+-------------------------------------------------------------------------------------
+Player1         Súng mãn xà     105             25              0.8            
+Player2		Súng Hải Tặc	115		25		0.5
+Player3 	Súng Băng	90		25		1

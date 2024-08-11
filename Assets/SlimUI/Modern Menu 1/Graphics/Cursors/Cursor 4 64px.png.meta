@@ -3,7 +3,11 @@ guid: c37a3cd6aac5ac24d90f974c7e86407a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Cursors/Cursor 4 64px.png.meta
   serializedVersion: 11
+=======
+  serializedVersion: 10
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/128/2. Shadow.png.meta
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,7 +24,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Cursors/Cursor 4 64px.png.meta
   isReadable: 1
+=======
+  isReadable: 0
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/128/2. Shadow.png.meta
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
@@ -32,7 +40,11 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: -1
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Cursors/Cursor 4 64px.png.meta
     aniso: 1
+=======
+    aniso: -1
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/128/2. Shadow.png.meta
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -57,7 +69,10 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Cursors/Cursor 4 64px.png.meta
   applyGammaDecoding: 1
+=======
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/128/2. Shadow.png.meta
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -69,6 +84,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Cursors/Cursor 4 64px.png.meta
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -81,6 +97,8 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+=======
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/128/2. Shadow.png.meta
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3

@@ -31,9 +31,15 @@ TextureImporter:
   maxTextureSize: 128
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD:Assets/SlimUI/Modern Menu 1/Graphics/Misc/LoadingHighlight 512px.png.meta
     filterMode: 0
     aniso: 16
     mipBias: -100
+=======
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+>>>>>>> parent of 87b6fb7 (update new):Assets/sprite/weapons/truong/PNG/6. Knife/128/1. Knife.png.meta
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -64,7 +70,7 @@ TextureImporter:
     maxTextureSize: 512
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

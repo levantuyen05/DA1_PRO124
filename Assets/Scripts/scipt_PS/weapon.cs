@@ -10,10 +10,12 @@ public class weapon : MonoBehaviour
     public float bulletForce;
 
     private float timeBtwFire;
-    // Start is called before the first frame update
+
+
+    public WeaponManager_PS weaponManager_PS;
     void Start()
     {
-
+        weaponManager_PS = FindObjectOfType<WeaponManager_PS>();
     }
 
     // Update is called once per frame
@@ -47,6 +49,8 @@ public class weapon : MonoBehaviour
     }
     void FireBullet()
     {
+       
+
         timeBtwFire = TimeFire;
         GameObject bl = Instantiate(bullet,firePos.position, Quaternion.identity);
         Rigidbody2D rb = bl.GetComponent<Rigidbody2D>();
